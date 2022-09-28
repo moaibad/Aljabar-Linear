@@ -3,6 +3,7 @@
 #include<math.h>
 #include<stdlib.h>
 
+//Operasi Matriks
 float determinant(float[][25],float);
 void cofactor(float[][25],float);
 void transpose(float[][25],float[][25],float);
@@ -17,11 +18,13 @@ void matrix_output(float[][25],int,int);
 void matrixaddsub();
 void determinant_input();
 void transpose_input();
+
+//SPL
 void SPL();
 
-void main()
-{
-	int a;char str;
+void main(){
+	int a;
+	char str;
 	int valid = 1;
 
 	while(valid = 1){
@@ -30,7 +33,7 @@ void main()
 		printf("::::1.Menghitung Penjumlahan atau Pengurangan dari matriks::::::::\n");
 		printf("::::2.Menghitung Determinan dari matriks::::\n");
 		printf("::::3.Menghitung Invers dari matriks::::::\n");
-		printf("::::4.Menghitung Perkalian dari matriks:\n");
+		printf("::::4.Menghitung Perkalian dari matriks::::\n");
 		printf("::::5.Menghitung Transpose dari matriks::::::\n");
 		printf("::::6.SPL Gauss Jordan::::::\n");
 		printf("::::7.Exit::::::\n");
@@ -56,16 +59,9 @@ void main()
 			case 6:
 				SPL();
 			case 7:
-				return 0;
+				exit(0);
 			default:
-				printf("Invalid choice\n");
-				printf("Do you want to Re-enter.\n");
-				printf("Press Y to continue or Press N to exit.\t");
-				scanf("%c",&str);
-				if (str=='y'||str=='Y')
-				{
-					main();
-				}
+				printf("Silahkan Masukan Pilihan Yang Sesuai !\n");
 				break;
 		}
 		getch();
@@ -95,23 +91,28 @@ void transpose_input()
     matrix_output(b,n,n);
 
 }
-void determinant_input()
-{
-float a[25][25],k,d;
-  int i,j;
-  printf("\n Calculation of determinant of matrix\n\n");
-  printf("Enter the order of the Square Matrix : ");
-  scanf("%f",&k);
-  printf("Enter the elements of %.0fX%.0f Matrix : \n",k,k);
-  for (i=0;i<k;i++)
-    {
-     for (j=0;j<k;j++)
-       {
-        scanf("%f",&a[i][j]);
-        }
-    }
-  d=determinant(a,k);
-  printf("Determinant of matrix is %f",d);
+
+void determinant_input(){
+	float a[25][25],k,d;
+	int i,j;
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("\tPenghitungan Determinan Matriks\n\n");
+	
+	printf("Masukan ordo matriks : ");
+	scanf("%f",&k);
+	
+	printf("Masukan elemen dari matriks %.0fX%.0f : \n",k,k);
+	for (i=0;i<k;i++){
+	 for (j=0;j<k;j++)
+	   {
+	    scanf("%f",&a[i][j]);
+	    }
+	}
+	
+	d=determinant(a,k);
+	printf("Determinan dari matriks adalah %f",d);
 }
 
 void matrixadd(float a[][25],float b[][25],int m, int n)
