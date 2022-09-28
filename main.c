@@ -394,13 +394,15 @@ void SPL(){
 		if(p>o){
 			printf("\nJumlah persamaan tidak boleh lebih besar dari jumlah variabel, silakan input kembali\n");
 		}
-		else
-		 break;
+		else{
+			break;	
+		}
+		 
 	}
 	for(int i=0;i<p;i++){
 		for(int j=0;j<o;j++){
-		printf(" Input A[%d][%d] : ",i+1,j+1);
-		scanf("%f",&a[i][j]);
+			printf(" Input A[%d][%d] : ",i+1,j+1);
+			scanf("%f",&a[i][j]);
 		}
 	}
 	for(int i=0;i<p;i++){
@@ -442,9 +444,10 @@ void SPL(){
 			printf("\nMatriks tidak konsisten, tidak dapat menghasilkan solusi persamaan linier, silakan input matriks kembali");
 			break;
 		}
-		else
-		printf("\n");
-		printf("X%d = %3.4f \n",(i+1),b[i]);
+		else{
+			printf("\n");
+			printf("X%d = %3.4f \n",(i+1),b[i]);
+		}
 	}
 	getch();
 }
