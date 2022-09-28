@@ -26,15 +26,15 @@ void main()
 
 	while(valid = 1){
 		system("cls");
-		printf("--------------WELCOME TO MATRIX CALCULATION--------------\n");
-		printf("::::1.Calulate Addition or Subtraction of matrix::::::::\n");
-		printf("::::2.Calculate Determinant of matrix::::\n");
-		printf("::::3.Calculate Inverse of a matrix::::::\n");
-		printf("::::4.Calculate Multiplication of matrix:\n");
-		printf("::::5.Calculate Transpose of matrix::::::\n");
+		printf("--------------PROGRAM PERHITUNGAN MATRIKS--------------\n");
+		printf("::::1.Menghitung Penjumlahan atau Pengurangan dari matriks::::::::\n");
+		printf("::::2.Menghitung Determinan dari matriks::::\n");
+		printf("::::3.Menghitung Invers dari matriks::::::\n");
+		printf("::::4.Menghitung Perkalian dari matriks:\n");
+		printf("::::5.Menghitung Transpose dari matriks::::::\n");
 		printf("::::6.SPL Gauss Jordan::::::\n");
 		printf("::::7.Exit::::::\n");
-		printf("Enter any choices from 1 to 5::\t");
+		printf("Masukan Pilihan 1 - 5 : ");
 		scanf("%d",&a);
 		switch (a)
 		{
