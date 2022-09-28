@@ -125,7 +125,7 @@ void matrixadd(float a[][25],float b[][25],int m, int n){
 		for(j=0;j<n;j++)
 		integral[i][j]=a[i][j] +b[i][j];
 	}
-	printf("Hasil penjumlahan dari kedua matriks adalah \n");
+	printf("\nHasil penjumlahan dari kedua matriks adalah \n");
 
 	matrix_output(integral,m,n);
 }
@@ -174,7 +174,7 @@ void matrixaddsub(){
 	}
 	printf("\n1.Hitung Penjumlahan Matriks.\n");
 	printf("2.Hitung Pengurangan Matriks.\n");
-	printf("\nMasukan Pilihan : ");
+	printf("Masukan Pilihan : ");
 	scanf("%d",&cho);
 
 	switch(cho){
