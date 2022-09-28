@@ -305,27 +305,25 @@ void transpose(float num[25][25],float fac[25][25],float r){
 	}
 }
 
-void matrixmultiply()
-{
+void matrixmultiply(){
 	int matrix1[10][10],matrix2[10][10],m,n,p,q,multi[10][10];
-	printf("enter dimension of matrix1 MXN\n");
+	printf("Masukan dimensi matriks pertama sebagai MxN : ");
 	scanf("%d %d",&m,&n);
-	printf("enter dimension of matrix2 PXQ\n");
+	printf("Masukan dimensi matriks kedua sebagai MxN : ");
 	scanf("%d %d",&p,&q);
-	if (n==p)
-	{
-	printf("\nEnter elements of matrices\n");
-	multireadmatrix(matrix1,matrix2,m,n,p,q);
-	multiprocessmatrix(matrix1,matrix2,multi,m,n,p,q);
-	printf("\nMatrix multiplication is ::::\n");
-	multishowmatrix(multi,m,q);
-}
-	else
-	{
-
-	printf("Matrix multiplication not possible");
+	
+	if (n==p){
+		printf("\n======Masukan Elemen Matriks======\n");
+		multireadmatrix(matrix1,matrix2,m,n,p,q);
+		multiprocessmatrix(matrix1,matrix2,multi,m,n,p,q);
+		printf("\nHasil perkalian dari kedua matriks adalah ::::\n");
+		multishowmatrix(multi,m,q);
+	}
+	else{
+		printf("Perkalian matriks tidak memungkinkan");
 	}
 }
+
 void multishowmatrix(int multi[][10],int n,int p)
 {
 	int i,j;
@@ -338,32 +336,31 @@ void multishowmatrix(int multi[][10],int n,int p)
 		printf("\n");
 	}
 }
-void multireadmatrix(int matrix1[][10],int matrix2[][10],int m,int n,int p,int q)
-{
+
+void multireadmatrix(int matrix1[][10],int matrix2[][10],int m,int n,int p,int q){
 	int i,j;
-	printf("\nEnter 1st Matrix\n");
-	for(i=0;i<m;i++)
-	{
-		for(j=0;j<n;j++)
-		scanf("%d",&matrix1[i][j]);
+	printf("\nMasukan elemen matriks pertama\n");
+	for(i=0;i<m;i++){
+		for(j=0;j<n;j++){
+			scanf("%d",&matrix1[i][j]);	
+		}
 	}
-	printf("\nEnter 2nd Matrix\n");
-	for(i=0;i<p;i++)
-	{
-		for(j=0;j<q;j++)
-		scanf("%d",&matrix2[i][j]);
+	printf("\nMasukan elemen matriks kedua\n");
+	for(i=0;i<p;i++){
+		for(j=0;j<q;j++){
+			scanf("%d",&matrix2[i][j]);	
+		}
 	}
 }
-void multiprocessmatrix(int matrix1[][10],int matrix2[][10],int multi[][10],int m, int n, int p, int q)
-{
+
+void multiprocessmatrix(int matrix1[][10],int matrix2[][10],int multi[][10],int m, int n, int p, int q){
 	int i,j,k;
-	for (i=0;i<m;i++)
-	{
-		for(j=0;j<q;j++)
-		{
+	for (i=0;i<m;i++){
+		for(j=0;j<q;j++){
 			multi[i][j]=0;
-			for(k=0;k<n;k++)
-			multi[i][j]=multi[i][j]+(matrix1[i][k]*matrix2[k][j]);
+			for(k=0;k<n;k++){
+				multi[i][j]=multi[i][j]+(matrix1[i][k]*matrix2[k][j]);	
+			}
 		}
 	}
 
