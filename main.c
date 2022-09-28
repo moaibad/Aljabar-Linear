@@ -70,26 +70,28 @@ void main(){
 	}
 
 }
-void transpose_input()
-{
+
+void transpose_input(){
 	int i,j,n;float a[25][25],b[25][25];
-	printf("Calculation of Matrix Transpose\n");
-	printf("Enter the dimension of square Matrix:\t");
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("\tTranspose Matriks\n\n");
+	
+	printf("Masukan dimensi dari matriks yang akan di transpose : ");
 	scanf("%d",&n);
-	printf("\nEnter the Matrix element of %dX%d matrix\n",n,n);
-	for(i=0;i<n;i++)
-	{
-		for(j=0;j<n;j++)
-		scanf("%f",&a[i][j]);
+	printf("\nMasukan elemen dari matriks %dX%d\n",n,n);
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			scanf("%f",&a[i][j]);	
+		}
 	}
-	for (i=0;i<n;i++)
-    {
-     for (j=0;j<n;j++)
-       {
-         b[i][j]=a[j][i];
+	for (i=0;i<n;i++){
+     	for (j=0;j<n;j++){
+        	b[i][j]=a[j][i];
         }
     }
-    printf("The transpose of a matrix is:\n");
+    printf("Hasil transpose dari matriks adalah :\n");
     matrix_output(b,n,n);
 
 }
@@ -154,6 +156,11 @@ void matrix_output(float dis[][25],int m,int n)
 
 void matrixaddsub(){
 	int i,j,m,n,cho; float a[25][25],b[25][25];
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("\tPenjumlahan/Pengurangan Matriks\n\n");
+	
 	printf("Masukan dimensi dari matriks sebagai MxN : ");
 	scanf("%d %d",&m,&n);
 	printf("Masukan elemen dari matriks pertama\n");
@@ -307,6 +314,11 @@ void transpose(float num[25][25],float fac[25][25],float r){
 
 void matrixmultiply(){
 	int matrix1[10][10],matrix2[10][10],m,n,p,q,multi[10][10];
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("\tPenghitungan Perkalian Matriks\n\n");
+	
 	printf("Masukan dimensi matriks pertama sebagai MxN : ");
 	scanf("%d %d",&m,&n);
 	printf("Masukan dimensi matriks kedua sebagai MxN : ");
