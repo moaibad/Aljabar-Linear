@@ -21,6 +21,7 @@ void transpose_input();
 
 //SPL
 void SPL();
+void TampilMatriks();
 
 void main(){
 	int a;
@@ -37,7 +38,7 @@ void main(){
 		printf("::::5.Menghitung Transpose dari matriks::::::\n");
 		printf("::::6.SPL Gauss Jordan::::::\n");
 		printf("::::7.Exit::::::\n");
-		printf("Masukan Pilihan 1 - 5 : ");
+		printf("\nMasukan Pilihan 1 - 7 : ");
 		scanf("%d",&a);
 		switch (a)
 		{
@@ -58,6 +59,7 @@ void main(){
 				break;
 			case 6:
 				SPL();
+				break;
 			case 7:
 				exit(0);
 			default:
@@ -385,6 +387,11 @@ int o,p;
 
 void SPL(){
 	int bool = 1;
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("\tPenghitungan SPL Matriks dengan Gauss Jordan\n\n");
+	
 	while(bool=1){
  	//untuk baris dan kolom
 		printf("Masukkan jumlah variabel : ");
@@ -399,14 +406,15 @@ void SPL(){
 		}
 		 
 	}
+	printf("\nMasukkan elemen matriks %dx%d : \n",o,p);
 	for(int i=0;i<p;i++){
 		for(int j=0;j<o;j++){
-			printf(" Input A[%d][%d] : ",i+1,j+1);
+			//printf(" Input A[%d][%d] : ",i+1,j+1);
 			scanf("%f",&a[i][j]);
 		}
 	}
 	for(int i=0;i<p;i++){
-		printf(" 	Input Hasil[%d] : ",i+1);
+		printf("Input Hasil[%d] : ",i+1);
 		scanf("%f",&b[i]);
 	}
 	
