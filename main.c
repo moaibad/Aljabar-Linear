@@ -117,30 +117,28 @@ void determinant_input(){
 	printf("Determinan dari matriks adalah %f",d);
 }
 
-void matrixadd(float a[][25],float b[][25],int m, int n)
-{
+void matrixadd(float a[][25],float b[][25],int m, int n){
 	int i,j;float integral[25][25];
-	for(i=0;i<m;i++)
-	{
+	for(i=0;i<m;i++){
 		for(j=0;j<n;j++)
 		integral[i][j]=a[i][j] +b[i][j];
 	}
-	printf("The addition of the two matrix is \n");
+	printf("Hasil penjumlahan dari kedua matriks adalah \n");
 
 	matrix_output(integral,m,n);
 }
-void matrixsub(float a[][25],float b[][25],int m, int n)
-{
+
+void matrixsub(float a[][25],float b[][25],int m, int n){
 	int i,j;float integral[25][25];
-	for(i=0;i<m;i++)
-	{
+	for(i=0;i<m;i++){
 		for(j=0;j<n;j++)
 		integral[i][j]=a[i][j] - b[i][j];
 	}
-	printf("The subtraction of the two matrix is \n");
+	printf("Hasil pengurangan dari kedua matriks adalah \n");
 
 	matrix_output(integral,m,n);
 }
+
 void matrix_output(float dis[][25],int m,int n)
 {
 	int i,j;
@@ -153,35 +151,30 @@ void matrix_output(float dis[][25],int m,int n)
 		printf("\n");
 	}
 }
-void matrixaddsub()
-{
+
+void matrixaddsub(){
 	int i,j,m,n,cho; float a[25][25],b[25][25];
-	printf("Enter the dimension of Matrix as MXN");
+	printf("Masukan dimensi dari matriks sebagai MxN : ");
 	scanf("%d %d",&m,&n);
-	printf("Enter the element of 1st Matrix\n");
-	for(i=0;i<m;i++)
-	{
-		for(j=0;j<n;j++)
-		{
+	printf("Masukan elemen dari matriks pertama\n");
+	for(i=0;i<m;i++){
+		for(j=0;j<n;j++){
 			scanf("%f",&a[i][j]);
 		}
 	}
-	printf("Enter the element of 2nd Matrix\n");
-	for(i=0;i<m;i++)
-	{
-		for(j=0;j<n;j++)
-		{
+	printf("Masukan elemen dari matriks kedua\n");
+	for(i=0;i<m;i++){
+		for(j=0;j<n;j++){
 			scanf("%f",&b[i][j]);
 		}
 	}
-	printf("1.Calculate Matrix Addition.\n");
-	printf("2.Calculate Matrix Subtraction.\n");
+	printf("1.Hitung Penjumlahan Matriks.\n");
+	printf("2.Hitung Pengurangan Matriks.\n");
 	scanf("%d",&cho);
 
-	switch(cho)
-	{
+	switch(cho){
 		case 1:
-
+			
 			matrixadd(a,b,m,n);
 			break;
 		case 2:
@@ -478,3 +471,6 @@ void TampilMatriks(){
 		printf("\n");
 	}
 }
+
+
+
