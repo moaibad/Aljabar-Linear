@@ -141,13 +141,10 @@ void matrixsub(float a[][25],float b[][25],int m, int n){
 	matrix_output(integral,m,n);
 }
 
-void matrix_output(float dis[][25],int m,int n)
-{
+void matrix_output(float dis[][25],int m,int n){
 	int i,j;
-	for(i=0;i<m;i++)
-	{
-		for(j=0;j<n;j++)
-		{
+	for(i=0;i<m;i++){
+		for(j=0;j<n;j++){
 			printf("%10f",dis[i][j]);
 		}
 		printf("\n");
@@ -175,8 +172,9 @@ void matrixaddsub(){
 			scanf("%f",&b[i][j]);
 		}
 	}
-	printf("1.Hitung Penjumlahan Matriks.\n");
+	printf("\n1.Hitung Penjumlahan Matriks.\n");
 	printf("2.Hitung Pengurangan Matriks.\n");
+	printf("\nMasukan Pilihan : ");
 	scanf("%d",&cho);
 
 	switch(cho){
