@@ -71,29 +71,52 @@ void main(){
 
 }
 
-void transpose_input(){
+//void transpose_input(){
+//	int i,j,n;float a[25][25],b[25][25];
+//	printf("-------------------------------------------------------------\n");
+//	printf("-------------------------------------------------------------\n");
+//	printf("-------------------------------------------------------------\n");
+//	printf("\tTranspose Matriks\n\n");
+//	
+//	printf("Masukan dimensi dari matriks yang akan di transpose : ");
+//	scanf("%d",&n);
+//	printf("\nMasukan elemen dari matriks %dX%d\n",n,n);
+//	for(i=0;i<n;i++){
+//		for(j=0;j<n;j++){
+//			scanf("%f",&a[i][j]);	
+//		}
+//	}
+//	for (i=0;i<n;i++){
+//     	for (j=0;j<n;j++){
+//        	b[i][j]=a[j][i];
+//        }
+//    }
+//    printf("Hasil transpose dari matriks adalah :\n");
+//    matrix_output(b,n,n);
+//
+//}
+
+void transpose_input()
+{
 	int i,j,n;float a[25][25],b[25][25];
-	printf("-------------------------------------------------------------\n");
-	printf("-------------------------------------------------------------\n");
-	printf("-------------------------------------------------------------\n");
-	printf("\tTranspose Matriks\n\n");
-	
-	printf("Masukan dimensi dari matriks yang akan di transpose : ");
+	printf("Calculation of Matrix Transpose\n");
+	printf("Enter the dimension of square Matrix:\t");
 	scanf("%d",&n);
-	printf("\nMasukan elemen dari matriks %dX%d\n",n,n);
-	for(i=0;i<n;i++){
-		for(j=0;j<n;j++){
-			scanf("%f",&a[i][j]);	
-		}
+	printf("\nEnter the Matrix element of %dX%d matrix\n",n,n);
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		scanf("%f",&a[i][j]);
 	}
-	for (i=0;i<n;i++){
-     	for (j=0;j<n;j++){
-        	b[i][j]=a[j][i];
+	for (i=0;i<n;i++)
+    {
+     for (j=0;j<n;j++)
+       {
+         b[i][j]=a[j][i];
         }
     }
-    printf("Hasil transpose dari matriks adalah :\n");
+    printf("The transpose of a matrix is:\n");
     matrix_output(b,n,n);
-
 }
 
 void determinant_input(){
@@ -136,7 +159,7 @@ void matrixsub(float a[][25],float b[][25],int m, int n){
 		for(j=0;j<n;j++)
 		integral[i][j]=a[i][j] - b[i][j];
 	}
-	printf("Hasil pengurangan dari kedua matriks adalah \n");
+	printf("\nHasil pengurangan dari kedua matriks adalah \n");
 
 	matrix_output(integral,m,n);
 }
@@ -160,13 +183,13 @@ void matrixaddsub(){
 	
 	printf("Masukan dimensi dari matriks sebagai MxN : ");
 	scanf("%d %d",&m,&n);
-	printf("Masukan elemen dari matriks pertama\n");
+	printf("\nMasukan elemen dari matriks pertama\n");
 	for(i=0;i<m;i++){
 		for(j=0;j<n;j++){
 			scanf("%f",&a[i][j]);
 		}
 	}
-	printf("Masukan elemen dari matriks kedua\n");
+	printf("\nMasukan elemen dari matriks kedua\n");
 	for(i=0;i<m;i++){
 		for(j=0;j<n;j++){
 			scanf("%f",&b[i][j]);
