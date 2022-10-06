@@ -71,52 +71,29 @@ void main(){
 
 }
 
-//void transpose_input(){
-//	int i,j,n;float a[25][25],b[25][25];
-//	printf("-------------------------------------------------------------\n");
-//	printf("-------------------------------------------------------------\n");
-//	printf("-------------------------------------------------------------\n");
-//	printf("\tTranspose Matriks\n\n");
-//	
-//	printf("Masukan dimensi dari matriks yang akan di transpose : ");
-//	scanf("%d",&n);
-//	printf("\nMasukan elemen dari matriks %dX%d\n",n,n);
-//	for(i=0;i<n;i++){
-//		for(j=0;j<n;j++){
-//			scanf("%f",&a[i][j]);	
-//		}
-//	}
-//	for (i=0;i<n;i++){
-//     	for (j=0;j<n;j++){
-//        	b[i][j]=a[j][i];
-//        }
-//    }
-//    printf("Hasil transpose dari matriks adalah :\n");
-//    matrix_output(b,n,n);
-//
-//}
-
-void transpose_input()
-{
+void transpose_input(){
 	int i,j,n;float a[25][25],b[25][25];
-	printf("Calculation of Matrix Transpose\n");
-	printf("Enter the dimension of square Matrix:\t");
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------\n");
+	printf("\tTranspose Matriks\n\n");
+	
+	printf("Masukan dimensi dari matriks yang akan di transpose : ");
 	scanf("%d",&n);
-	printf("\nEnter the Matrix element of %dX%d matrix\n",n,n);
-	for(i=0;i<n;i++)
-	{
-		for(j=0;j<n;j++)
-		scanf("%f",&a[i][j]);
+	printf("\nMasukan elemen dari matriks %dX%d\n",n,n);
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			scanf("%f",&a[i][j]);	
+		}
 	}
-	for (i=0;i<n;i++)
-    {
-     for (j=0;j<n;j++)
-       {
-         b[i][j]=a[j][i];
-        }
-    }
-    printf("The transpose of a matrix is:\n");
-    matrix_output(b,n,n);
+	for (i=0;i<n;i++){
+    	for (j=0;j<n;j++){
+       	b[i][j]=a[j][i];
+       }
+   }
+   printf("Hasil transpose dari matriks adalah :\n");
+   matrix_output(b,n,n);
+
 }
 
 void determinant_input(){
