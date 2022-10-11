@@ -3,6 +3,13 @@
 #include<math.h>
 #include<stdlib.h>
 
+/*
+Source :
+- https://github.com/sanjevShakya/Matrix-Calculator 
+- https://github.com/revaldi030900/SPL-Gauss-Jordan/blob/master/18106050002_quizkompetitif.cpp 
+*/
+
+
 //Operasi Matriks
 float determinant(float[][25],float);
 void cofactor(float[][25],float);
